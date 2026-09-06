@@ -54,7 +54,10 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 /*================================= Typed JS==========================*/
 const typed = new Typed(".multiple-text", {
-  strings: ["APP Website Framework"],
+  strings: [
+    "Web Developer",
+    "Jasa Pembuatan Website"
+  ],
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,
