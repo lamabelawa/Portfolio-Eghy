@@ -316,69 +316,190 @@
 
     <!-- Contact Design -->
     <section class="contact" id="contact">
-      <h2 class="heading"><span>Kontak</span> Saya</h2>
 
-      <form action="#">
-        <div class="input-box">
-          <div class="input-field field">
-            <input
-              type="text"
-              placeholder="Nama Lengkap"
-              id="name"
-              class="item"
-              autocomplete="off"
-            />
-            <div class="error-txt">Nama lengkap tidak boleh kosong</div>
-          </div>
-          <div class="input-field field">
-            <input
-              type="text"
-              placeholder="Alamat Email"
-              id="email"
-              class="item"
-              autocomplete="off"
-            />
-            <div class="error-txt email">Email tidak boleh kosong</div>
-          </div>
+    <h2 class="heading">
+        Mari <span>Bekerja Sama</span>
+    </h2>
+
+    <p class="contact-description">
+        Punya ide website atau aplikasi?
+        Ceritakan kebutuhan Anda dan mari kita wujudkan bersama.
+    </p>
+
+    <div class="contact-container">
+
+        <!-- ========================= -->
+        <!-- INFORMASI KONTAK -->
+        <!-- ========================= -->
+
+        <div class="contact-info">
+
+            <h3>Let's Talk <span>👋</span></h3>
+
+            <p class="contact-text">
+                Saya siap membantu membangun website dan aplikasi
+                web yang profesional, responsif, dan sesuai dengan
+                kebutuhan Anda.
+            </p>
+
+            <!-- WhatsApp -->
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div class="contact-item-text">
+                    <span>WhatsApp</span>
+                    <p>+62 857-0231-7565</p>
+                </div>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="contact-item-text">
+                    <span>Email</span>
+                    <p>sergiuslamabelawa07@gmail.com</p>
+                </div>
+
+            </div>
+
+
+            <!-- Lokasi -->
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="contact-item-text">
+                    <span>Lokasi</span>
+                    <p>Kupang, Nusa Tenggara Timur</p>
+                </div>
+
+            </div>
+
+
+            <!-- Tombol WhatsApp langsung -->
+            <a
+                href="https://wa.me/6285702317565"
+                target="_blank"
+                class="btn whatsapp-direct"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Chat WhatsApp
+            </a>
+
         </div>
 
-        <div class="input-box">
-          <div class="input-field field">
-            <input
-              type="text"
-              placeholder="Nomor Hp"
-              id="phone"
-              class="item"
-              autocomplete="off"
-            />
-            <div class="error-txt">Nomor HP tidak boleh kosong</div>
-          </div>
-          <div class="input-field field">
-            <input
-              type="text"
-              placeholder="Judul Email"
-              id="subject"
-              class="item"
-              autocomplete="off"
-            />
-            <div class="error-txt">Judul Email tidak boleh kosong</div>
-          </div>
-        </div>
-        <div class="textarea-field field">
-          <textarea
-            name=""
-            id="messager"
-            cols="30"
-            rows="10"
-            placeholder="Tuliskan pesan"
-            class="item"
-            autocomplete="off"
-          ></textarea>
-          <div class="error-txt">Pesan tidak boleh kosong</div>
-        </div>
-        <button type="submit">Kirim Pesan</button>
-      </form>
-    </section>
+
+        <!-- ========================= -->
+        <!-- FORM KONTAK -->
+        <!-- ========================= -->
+
+        <form id="contact-form">
+
+            <div class="input-box">
+
+                <!-- Nama -->
+                <div class="input-field">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Nama Lengkap"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="input-field">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Alamat Email"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Kebutuhan -->
+            <div class="input-field">
+
+                <select id="service">
+
+                    <option value="">
+                        Pilih Kebutuhan
+                    </option>
+
+                    <option value="Website Company Profile">
+                        Website Company Profile
+                    </option>
+
+                    <option value="Landing Page">
+                        Landing Page
+                    </option>
+
+                    <option value="Sistem Informasi">
+                        Sistem Informasi
+                    </option>
+
+                    <option value="Aplikasi Web">
+                        Aplikasi Web
+                    </option>
+
+                    <option value="Maintenance Website">
+                        Maintenance Website
+                    </option>
+
+                    <option value="Lainnya">
+                        Lainnya
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Pesan -->
+            <div class="textarea-field">
+
+                <textarea
+                    id="message"
+                    rows="7"
+                    placeholder="Ceritakan kebutuhan website Anda..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Tombol -->
+            <button type="submit" class="btn">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Kirim ke WhatsApp
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
 
     <!-- Footer Design -->
     <footer class="footer">
