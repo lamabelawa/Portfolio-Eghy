@@ -328,6 +328,93 @@ span {
   color: var(--bg-color);
 }
 
+/* Teknologi */
+
+.technologies {
+  background: var(--bg-color);
+}
+
+.technologies h2 {
+  margin-bottom: 1.5rem;
+}
+
+.technologies-description {
+  max-width: 700px;
+  margin: 0 auto 5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.technologies-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.technology-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  background: var(--sn-bg-color);
+  border: 0.2rem solid transparent;
+  border-radius: 2rem;
+  transition: 0.5s ease;
+}
+
+.technology-card:hover {
+  border-color: var(--main-color);
+  transform: translateY(-1rem);
+  box-shadow: 0 0 1.5rem rgba(89, 130, 244, 0.3);
+}
+
+.technology-icon {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  background: rgba(89, 130, 244, 0.1);
+  transition: 0.5s ease;
+}
+
+.technology-icon i {
+  font-size: 4rem;
+  color: var(--main-color);
+  transition: 0.5s ease;
+}
+
+.technology-card:hover .technology-icon {
+  background: var(--main-color);
+  transform: scale(1.05);
+}
+
+.technology-card:hover .technology-icon i {
+  color: var(--text-color);
+}
+
+.technology-card h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.technology-card p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
 /* Kontak */
 .contact h2 {
   margin-bottom: 3rem;
@@ -489,6 +576,12 @@ form button:hover {
   .portfolio {
     padding-bottom: 7rem;
   }
+  .technologies {
+      padding: 8rem 5%;
+  }
+  .technologies-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
 
   .contact {
     min-height: auto;
@@ -555,6 +648,17 @@ form button:hover {
   .portfolio-container {
     grid-template-columns: repeat(2, 1 fr);
   }
+  .technologies {
+    padding: 8rem 5%;
+  }
+
+  .technologies-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technologies-description {
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media (max-width: 617px) {
@@ -568,6 +672,23 @@ form button:hover {
   .about-img img {
     width: 100vw;
     margin-top: 4rem;
+  }
+  .technologies-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .technology-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .technology-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .technology-icon i {
+    font-size: 3.5rem;
   }
 }
 
