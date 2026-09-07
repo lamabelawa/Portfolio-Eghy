@@ -416,109 +416,254 @@ span {
 }
 
 /* Kontak */
+.contact {
+  background: var(--bg-color);
+}
+
 .contact h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
-.contact form {
-  max-width: 70rem;
-  margin: 1rem auto;
+.contact-description {
+  max-width: 700px;
+  margin: 0 auto 5rem;
   text-align: center;
-  margin-bottom: 3rem;
-}
-
-.contact form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.input-box .input-field {
-  width: 49%;
-}
-
-.field .item {
-  width: 100%;
-  padding: 1.5rem;
   font-size: 1.6rem;
-  color: var(--text-color);
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* Container */
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 5rem;
+  align-items: center;
+}
+
+
+/* ============================= */
+/* Contact Info */
+/* ============================= */
+
+.contact-info {
   background: var(--sn-bg-color);
-  border-radius: 0.8rem;
-  margin: 0.7rem 0;
-}
+  padding: 4rem 3.5rem;
 
-.field.error .item {
-  border-color: #960c02;
-}
+  border-radius: 2rem;
+  border: 0.2rem solid transparent;
 
-.field .error-txt {
-  font-size: 14.5px;
-  color: #d93025;
-  text-align: left;
-  margin: -5px 0 10px;
-  display: none;
-}
-
-.field.error .error-txt {
-  display: block;
-}
-
-form .textarea-field .field {
-  resize: none;
-}
-
-form .textarea-field .error-txt {
-  margin-top: -10px;
-}
-
-form .textarea-field .item {
-  resize: none;
-}
-
-form button {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: var(--main-color);
-  border: none;
-  outline: none;
-  border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--bg-color);
-  letter-spacing: 1px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 20px;
   transition: 0.5s ease;
 }
 
-form button:hover {
-  box-shadow: none;
+.contact-info:hover {
+  border-color: var(--main-color);
+  box-shadow: 0 0 1.5rem rgba(89, 130, 244, 0.2);
 }
 
-/* .contact form .input-box input,
-.contact form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
+.contact-info h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info h3 span {
+  color: var(--main-color);
+}
+
+.contact-text {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  opacity: 0.8;
+
+  margin-bottom: 3rem;
+}
+
+
+/* Contact Item */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2.5rem;
+}
+
+
+/* Icon */
+
+.contact-icon {
+  width: 5rem;
+  height: 5rem;
+
+  min-width: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(89, 130, 244, 0.1);
+
+  border-radius: 50%;
+
+  transition: 0.4s ease;
+}
+
+.contact-icon i {
+  font-size: 2.4rem;
+  color: var(--main-color);
+
+  transition: 0.4s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: var(--main-color);
+  transform: scale(1.05);
+}
+
+.contact-item:hover .contact-icon i {
   color: var(--text-color);
+}
+
+
+/* Text */
+
+.contact-item-text span {
+  display: block;
+
+  font-size: 1.3rem;
+
+  color: var(--main-color);
+
+  margin-bottom: 0.3rem;
+}
+
+.contact-item-text p {
+  font-size: 1.5rem;
+}
+
+
+/* WhatsApp Direct */
+
+.whatsapp-direct {
+  margin-top: 1rem;
+}
+
+.whatsapp-direct i {
+  margin-right: 0.7rem;
+}
+
+
+/* ============================= */
+/* Contact Form */
+/* ============================= */
+
+#contact-form {
+  width: 100%;
+}
+
+#contact-form .input-box {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+}
+
+#contact-form .input-field {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Input */
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+
+  width: 100%;
+
+  padding: 1.5rem;
+
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 1.6rem;
+
+  color: var(--text-color);
+
   background: var(--sn-bg-color);
+
   border-radius: 0.8rem;
-  margin: 0.7rem 0;
+
+  border: 0.2rem solid transparent;
+
+  transition: 0.4s ease;
 }
 
-.contact form .input-box input {
-  width: 49%;
+
+/* Placeholder */
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
 }
 
-.contact form textarea {
-  resize: none;
+
+/* Focus */
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+  border-color: var(--main-color);
+
+  box-shadow: 0 0 1rem rgba(89, 130, 244, 0.2);
 }
 
-.contact form .btn {
-  margin-top: 2rem;
+
+/* Select */
+
+#contact-form select {
   cursor: pointer;
-} */
+}
+
+#contact-form select option {
+  background: var(--sn-bg-color);
+  color: var(--text-color);
+}
+
+
+/* Textarea */
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 16rem;
+}
+
+
+/* Button */
+
+#contact-form button {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  cursor: pointer;
+}
+
+#contact-form button i {
+  font-size: 1.8rem;
+}
 
 /* Footer */
 .footer {
@@ -583,9 +728,17 @@ form button:hover {
       grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact {
-    min-height: auto;
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
+
+  .contact-info {
+    max-width: 70rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
 
   .footer {
     padding: 2rem 3%;
@@ -659,6 +812,15 @@ form button:hover {
   .technologies-description {
     margin-bottom: 3.5rem;
   }
+
+   .contact-description {
+    margin-bottom: 3.5rem;
+  }
+
+  #contact-form .input-box {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 @media (max-width: 617px) {
@@ -690,6 +852,19 @@ form button:hover {
   .technology-icon i {
     font-size: 3.5rem;
   }
+
+   .contact-info {
+    padding: 3rem 2.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 2.6rem;
+  }
+
+  .contact-item-text p {
+    font-size: 1.4rem;
+  }
+
 }
 
 @media (max-width: 450px) {
@@ -697,13 +872,23 @@ form button:hover {
     font-size: 50%;
   }
 
-  .contact form .input-box {
-    display: flex;
-    flex-direction: column;
+  .contact-info {
+    padding: 2.5rem 2rem;
   }
 
-  .contact form .input-box input {
-    margin-bottom: 10px;
-    width: 200%;
+  .contact-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    min-width: 4.5rem;
+  }
+
+  .contact-icon i {
+    font-size: 2rem;
+  }
+
+  #contact-form input,
+  #contact-form select,
+  #contact-form textarea {
+    font-size: 1.5rem;
   }
 }
