@@ -64,95 +64,48 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-/*================================= SmtpJS==========================*/
+/*================================= KontakJS==========================*/
 
-const form = document.querySelector("form");
-const fullName = document.getElementById("name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const subject = document.getElementById("subject");
-const mess = document.getElementById("messager");
+const contactForm = document.getElementById("contact-form");
 
-function sendEmail() {
-  const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}`;
-  Email.send({
-    SecureToken: "eaa5f4a8-fc4a-4872-b8bb-eb37c3d5a61d",
-    To: "sergiuslamabelawa07@gmail.com",
-    From: "sergiuslamabelawa07@gmail.com",
-    Subject: subject.value,
-    Body: bodyMessage,
-  }).then((messager) => {
-    if (messager == "OK") {
-      Swal.fire({
-        title: "Success!",
-        text: "Messager send successfully!",
-        icon: "success",
-      });
-    }
-  });
-}
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-function checkInputs() {
-  const items = document.querySelectorAll(".item");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
 
-  for (const item of items) {
-    if (item.value == "") {
-      item.classList.add("error");
-      item.parentElement.classList.add("error");
+    // Validasi
+    if (!name || !email || !service || !message) {
+        alert("Silakan lengkapi semua data terlebih dahulu.");
+        return;
     }
 
-    if (items[1].value != "") {
-      checkEmail();
-    }
+    // Nomor WhatsApp tujuan
+    const whatsappNumber = "6285702317565";
 
-    items[1].addEventListener("keyup", () => {
-      checkEmail();
-    });
+    // Pesan yang akan dikirim
+    const whatsappMessage = `
+Halo, saya tertarik menggunakan jasa Anda.
 
-    item.addEventListener("keyup", () => {
-      if (item.value != "") {
-        item.classList.remove("error");
-        item.parentElement.classList.remove("error");
-      } else {
-        item.classList.add("error");
-        item.parentElement.classList.add("error");
-      }
-    });
-  }
-}
+Nama: ${name}
+Email: ${email}
+Kebutuhan: ${service}
 
-function checkEmail() {
-  const emailRegex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
-  const errorTxtEmail = document.querySelector(".error-txt.email");
+Pesan:
+${message}
 
-  if (!email.value.match(emailRegex)) {
-    email.classList.add("error");
-    email.parentElement.classList.add("error");
-    if (email.value != "") {
-      errorTxtEmail.innerText = "Email tidak valid";
-    } else {
-      errorTxtEmail.innerText = "Email tidak boleh kosong";
-    }
-  } else {
-    email.classList.remove("error");
-    email.parentElement.classList.remove("error");
-  }
-}
+Terima kasih.
+`;
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  checkInputs();
+    // Membuat URL WhatsApp
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-  if (
-    !fullName.classList.contains("error") &&
-    !email.classList.contains("error") &&
-    !phone.classList.contains("error") &&
-    !subject.classList.contains("error") &&
-    !mess.classList.contains("error")
-  ) {
-    sendEmail();
+    // Membuka WhatsApp
+    window.open(whatsappURL, "_blank");
 
-    form.reset();
-    return false;
-  }
+    // Reset form
+    contactForm.reset();
 });
