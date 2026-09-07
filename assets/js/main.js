@@ -83,7 +83,7 @@ contactForm.addEventListener("submit", function (e) {
     }
 
     // Nomor WhatsApp tujuan
-    const whatsappNumber = "6285702317565";
+    const whatsappNumber = "6281239648697";
 
     // Pesan yang akan dikirim
     const whatsappMessage = `
